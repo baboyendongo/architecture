@@ -1,0 +1,59 @@
+<div class="home-hero">
+  <div class="home-hero-left">
+    <div class="home-hero-content">
+      <p class="home-hero-description">
+        Build with an intensive and intellectually rigorous design process aimed at providing sustainable, timeless and advanced design.
+      </p>
+      <a href="#" class="home-hero-link">
+        <span>Explore our projects</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+  <div class="home-hero-right">
+    <img src="assets/images/image1.png" alt="Modern Tower" />
+  </div>
+</div>
+
+<div class="home-stats-bar">
+  <div class="stat-block">
+    <div class="stat-number">14</div>
+    <div class="stat-label">Clients</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-number">21</div>
+    <div class="stat-label">Projects completed</div>
+  </div>
+  <div class="stat-block">
+    <div class="stat-number">6</div>
+    <div class="stat-label">Awards won</div>
+  </div>
+  <div class="stat-block stat-cta">
+    <div class="stat-number">Got an idea?</div>
+    <a href="#" class="stat-link">Let's make it happen.</a>
+  </div>
+</div>
+
+<div class="projects-section">
+    <div class="projects-sidebar">
+      <div class="projects-icon">
+        <!-- Icône bâtiment SVG -->
+        <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path stroke="#008000" stroke-width="2" d="M4 21V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16M9 21V9h6v12"/></svg>
+      </div>
+      <a href="#" class="projects-link">See all projects</a>
+    </div>
+    <div class="projects-carousel">
+      <button class="carousel-arrow left" (click)="prevImage()"><span>&#8592;</span></button>
+      <div class="carousel-image-group">
+        <div class="carousel-image" *ngFor="let img of visibleImages">
+          <img [src]="img.src" [alt]="img.caption" />
+          <div class="carousel-caption">{{ img.caption }}</div>
+          <div class="carousel-progress">
+            <div class="carousel-progress-bar"></div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-arrow right" (click)="nextImage()"><span>&#8594;</span></button>
+    </div>
+  </div>
+  
