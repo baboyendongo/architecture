@@ -1,4 +1,254 @@
 <!-- HERO SECTION -->
+
+<style>
+.carousel-arrow:hover {
+  background: #008000;
+  color: #fff;
+}
+
+.carousel-image-group {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-image {
+  position: relative;
+  width: 480px;
+  height: 320px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 60%, transparent 100%);
+  color: #fff;
+}
+
+.carousel-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.carousel-type {
+  font-size: 1rem;
+  color: #b6ffb6;
+  margin-bottom: 0.8rem;
+}
+
+.carousel-progress {
+  width: 100%;
+  height: 4px;
+  background: #222;
+  border-radius: 2px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.carousel-progress-bar {
+  height: 100%;
+  background: #008000;
+  border-radius: 2px;
+  transition: width 0.4s;
+}
+
+.block-section {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+  gap: 2rem;
+}
+
+.block-sidebar {
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 0.5rem;
+  gap: 0.5rem;
+}
+
+.block-icon {
+  background: #e6ffe6;
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block-sidebar h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.block-link {
+  color: #008000;
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 1.05rem;
+  margin-top: 0.2rem;
+  transition: color 0.2s;
+}
+
+.block-link:hover {
+  color: #00b300;
+}
+
+.block-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.block-image {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.block-text {
+  color: #444;
+  font-size: 1.08rem;
+  text-align: left;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.contact-section {
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  padding: 2rem 0;
+  border-top: 1px solid #eee;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.contact-grid div {
+  font-size: 1rem;
+  color: #222;
+}
+
+.contact-grid span:first-child {
+  font-weight: 700;
+  color: #008000;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .hero-main {
+    flex-direction: column;
+    min-height: unset;
+  }
+  .hero-left, .hero-right {
+    flex: unset;
+    width: 100vw;
+    min-width: 0;
+    padding-left: 0;
+  }
+  .hero-right img {
+    height: 320px;
+    max-width: 98vw;
+    border-radius: 12px;
+  }
+  .hero-stats-bar-full {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.2rem 0;
+  }
+  .hero-stats-bar-full .stat-block {
+    min-width: 0;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .projects-section {
+    flex-direction: column;
+    min-height: unset;
+  }
+  .projects-sidebar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 0;
+    padding: 1.2rem 1rem;
+    width: 100%;
+  }
+  .projects-carousel {
+    padding: 1.2rem 0;
+  }
+  .carousel-image-group {
+    gap: 1rem;
+  }
+  .carousel-image {
+    width: 100vw;
+    max-width: 95vw;
+    height: 220px;
+  }
+  .block-section {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0.5rem;
+  }
+  .block-sidebar {
+    min-width: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 0;
+  }
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+
 <section class="hero-main">
   <div class="hero-left">
     <div class="hero-left-content">
