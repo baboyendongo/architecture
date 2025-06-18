@@ -1,21 +1,21 @@
-<div class="home-hero">
-  <div class="home-hero-left">
-    <div class="home-hero-content">
-      <p class="home-hero-description">
-        Build with an intensive and intellectually rigorous design process aimed at providing sustainable, timeless and advanced design.
+<!-- HERO SECTION -->
+<section class="hero-main">
+  <div class="hero-left">
+    <div class="hero-left-content">
+      <h1>Chez Ordre Mauritanien Des Architectes, Nous construisons pour la durabilité</h1>
+      <p>
+        Construit avec un processus de conception intensif et intellectuellement rigoureux visant à fournir un design durable, intemporel et avancé.
       </p>
-      <a href="#" class="home-hero-link">
-        <span>Explore our projects</span>
-        <span class="arrow">→</span>
-      </a>
+      <a href="#" class="hero-link">Explorer Nos Projects <span class="arrow">→</span></a>
     </div>
   </div>
-  <div class="home-hero-right">
+  <div class="hero-right">
     <img src="assets/images/image1.png" alt="Modern Tower" />
   </div>
-</div>
+</section>
 
-<div class="home-stats-bar">
+<!-- BARRE DES STATISTIQUES EN DESSOUS DE LA HERO -->
+<div class="hero-stats-bar-full">
   <div class="stat-block">
     <div class="stat-number">14</div>
     <div class="stat-label">Clients</div>
@@ -34,26 +34,95 @@
   </div>
 </div>
 
-<div class="projects-section">
-    <div class="projects-sidebar">
-      <div class="projects-icon">
-        <!-- Icône bâtiment SVG -->
-        <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path stroke="#008000" stroke-width="2" d="M4 21V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16M9 21V9h6v12"/></svg>
-      </div>
-      <a href="#" class="projects-link">See all projects</a>
+<!-- PROJECTS SECTION -->
+<section class="projects-section">
+  <aside class="projects-sidebar">
+    <div class="projects-icon">
+      <!-- Icône bâtiment SVG -->
+      <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path stroke="#008000" stroke-width="2" d="M4 21V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16M9 21V9h6v12"/></svg>
     </div>
-    <div class="projects-carousel">
-      <button class="carousel-arrow left" (click)="prevImage()"><span>&#8592;</span></button>
-      <div class="carousel-image-group">
-        <div class="carousel-image" *ngFor="let img of visibleImages">
-          <img [src]="img.src" [alt]="img.caption" />
-          <div class="carousel-caption">{{ img.caption }}</div>
+    <a href="#" class="projects-link">See all projects</a>
+  </aside>
+  <div class="projects-carousel">
+    <button class="carousel-arrow left" (click)="prevImage()">
+      <span>&#8592;</span>
+    </button>
+    <div class="carousel-image-group">
+      <div class="carousel-image" *ngFor="let img of visibleImages; let i = index">
+        <img [src]="img.src" [alt]="img.caption" />
+        <div class="carousel-caption">
+          <div class="carousel-title">{{ img.caption }}</div>
+          <div class="carousel-type">{{ img.type }}</div>
           <div class="carousel-progress">
-            <div class="carousel-progress-bar"></div>
+            <div class="carousel-progress-bar" [style.width]="i === 0 ? '60%' : '0'"></div>
           </div>
         </div>
       </div>
-      <button class="carousel-arrow right" (click)="nextImage()"><span>&#8594;</span></button>
+    </div>
+    <button class="carousel-arrow right" (click)="nextImage()">
+      <span>&#8594;</span>
+    </button>
+  </div>
+</section>
+
+<!-- TEAM SECTION -->
+<section class="block-section">
+  <div class="block-sidebar">
+    <div class="block-icon">
+      <!-- SVG user icon -->
+      <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path stroke="#008000" stroke-width="2" d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.418 0-8 2.239-8 5v3h16v-3c0-2.761-3.582-5-8-5Z"/></svg>
+    </div>
+    <div>
+      <h2>Meet the team</h2>
+      <a href="#" class="block-link">Learn more</a>
     </div>
   </div>
+  <div class="block-content">
+    <img src="assets/images/Rectangle11.png" alt="Team" class="block-image" />
+    <p class="block-text">
+      Our architectural firm is committed to creating buildings that are not only modern and stylish, but also eco-friendly and sustainable. We understand the importance of minimizing the environmental impact of our buildings and strive to incorporate sustainable design practices in all of our projects.
+    </p>
+  </div>
+</section>
+
+<!-- AWARDS SECTION -->
+<section class="block-section">
+  <div class="block-sidebar">
+    <div class="block-icon">
+      <!-- SVG trophy icon -->
+      <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><path stroke="#008000" stroke-width="2" d="M12 17v4M8 21h8M4 5h16v2a8 8 0 0 1-16 0V5Z"/></svg>
+    </div>
+    <div>
+      <h2>Awards/Features</h2>
+      <a href="#" class="block-link">See all awards</a>
+    </div>
+  </div>
+  <div class="block-content">
+    <!-- Grid of awards/features -->
+    <!-- ... -->
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+  <h2>Let's make it happen.</h2>
+  <div class="contact-grid">
+    <div>
+      <span>Send us an email</span>
+      <span>enquiries&#64;buildwithlayers.com</span>
+    </div>
+    <div>
+      <span>Give us a call</span>
+      <span>+233 300 000 000</span>
+    </div>
+    <div>
+      <span>Visit our office</span>
+      <span>8 Aburi Road, Accra Central<br>Accra, Ghana</span>
+    </div>
+    <div>
+      <span>Send us a package</span>
+      <span>P.O Box AC 0000<br>Accra Central, Accra<br>Ghana</span>
+    </div>
+  </div>
+</section>
   

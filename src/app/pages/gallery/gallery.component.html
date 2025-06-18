@@ -1,1 +1,17 @@
-<p>gallery works!</p>
+<div class="projects-header">
+  <h2 class="projects-title">Nos projects</h2>
+  <div class="projects-categories">
+    <span
+      *ngFor="let cat of categories"
+      class="category"
+      [class.active]="cat === selectedCategory"
+      (click)="selectedCategory = cat"
+    >
+      {{ cat }}
+    </span>
+  </div>
+</div>
+
+<div class="projects-image-wrapper">
+  <img src="assets/images/image_project/Image-1.png" alt="Modern Architecture" class="projects-image" />
+</div>

@@ -8,14 +8,14 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   projectImages = [
-    { src: 'assets/images/Project.png', caption: 'Commercial project' },
-    { src: 'assets/images/image1.png', caption: 'Modern Tower' },
-    { src: 'assets/images/project2.jpg', caption: 'Institutional project' },
-    { src: 'assets/images/Rectangle9.png', caption: 'Residential project' },
-    { src: 'assets/images/Rectangle9.png', caption: 'Cultural project' },
-    { src: 'assets/images/Rectangle9.png', caption: 'Educational project' },
-    { src: 'assets/images/Rectangle9.png', caption: 'Office project' },
-    { src: 'assets/images/Rectangle9.png', caption: 'Mixed-use project' }
+    { src: 'assets/images/Project.png', caption: 'Brown’s Retreat', type: 'Commercial project' },
+    { src: 'assets/images/image1.png', caption: 'Kim’s Place', type: 'Institutional project' },
+    { src: 'assets/images/image1.jpg', caption: 'Institutional project', type: 'Institutional project' },
+    { src: 'assets/images/Rectangle9.png', caption: 'Residential project', type: 'Residential project' },
+    { src: 'assets/images/Rectangle9.png', caption: 'Cultural project', type: 'Cultural project' },
+    { src: 'assets/images/Rectangle9.png', caption: 'Educational project', type: 'Educational project' },
+    { src: 'assets/images/Rectangle9.png', caption: 'Office project', type: 'Office project' },
+    { src: 'assets/images/Rectangle9.png', caption: 'Mixed-use project', type: 'Mixed-use project' }
   ];
   currentIndex = 0;
   intervalId: any;

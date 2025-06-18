@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './gallery.component.css'
 })
 export class GalleryComponent {
-
+  selectedCategory = 'Commercial';
+  categories = ['Commercial', 'Institutional', 'Residential'];
 }
